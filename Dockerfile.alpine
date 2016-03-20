@@ -1,5 +1,7 @@
 FROM alpine
 
+RUN mkdir /opt
+
 # Java Version and other ENV
 ENV JAVA_VERSION_MAJOR=8 \
     JAVA_VERSION_MINOR=72 \
