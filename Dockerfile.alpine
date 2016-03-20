@@ -62,9 +62,9 @@ RUN apk upgrade --update && \
 
 
 WORKDIR /app
-COPY . /app
+onbuild COPY . /app
 WORKDIR /app
-RUN ./gradlew build
+onbuild RUN ./gradlew build
 #RUN ./gradlew -Dorg.gradle.native=false build
 
 cmd ["./gradlew", "bootrun"]
